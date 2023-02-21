@@ -36,7 +36,7 @@ export default function Header({ onClickNav, scrollIndex }) {
                 : { color: "#605E5E" }
             }
           >
-            ABOUT
+            PROFILE
           </li>
           <li
             onClick={() => {

@@ -1,6 +1,6 @@
 import "./App.css";
 
-import About from "./components/About";
+import Profile from "./components/Profile";
 import Header from "./components/Header";
 import Title from "./components/Title";
 import { useRef, useState, useEffect } from "react";
@@ -105,7 +105,7 @@ function App() {
       <Header onClickNav={onClickNav} scrollIndex={scrollIndex} />
       <Title />
       <div className="divider"></div>
-      <About />
+      <Profile />
       <div className="divider"></div>
       <Projects />
       <div className="divider"></div>

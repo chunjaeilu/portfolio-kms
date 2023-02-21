@@ -4,11 +4,13 @@
 :root {
   --main-color: #e3fb6d;
   --font-color: #605e5e;
+  --sub-color: #95fc5d;
 }
 
 body {
   font-family: "Poppins", "Noto Sans KR", sans-serif;
   overflow: hidden;
+  color: var(--font-color);
 }
 
 * {
@@ -87,13 +89,17 @@ header nav ul {
 header nav ul li {
   color: #fff;
   cursor: default;
+  font-size: 18px;
 }
 
 section {
   width: 100%;
   height: 100vh;
-  padding: 100px 20px;
+  padding: 100px;
 }
+/* ################# */
+/* ##### TITLE ##### */
+/* ################# */
 
 #title {
   background-image: url(./images/title-bg.webp);
@@ -101,17 +107,15 @@ section {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  display: flex;
+  position: relative;
 }
 
 #title .txt-box {
-  width: 50%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: #fff;
-  padding-left: 100px;
 }
 
 #title .txt-box h2 {
@@ -121,15 +125,16 @@ section {
 
 #title .txt-box p {
   font-size: 20px;
+  font-weight: 100;
 }
 
 #title .area {
-  width: 50%;
-  margin-top: 40vh;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding-right: 100px;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
 }
 
 #title .area .row {
@@ -145,41 +150,142 @@ section {
 
 #title .area .row .stack-box {
   position: relative;
+  transition: 0.5s;
 }
 
-#title .area .row .stack-box p {
+#title .area .row .stack-box .stack-txt {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   color: var(--main-color);
+  font-weight: 300;
 }
 
-#about {
+/* ################### */
+/* ##### PROFILE ##### */
+/* ################### */
+
+#profile {
   background-image: url(./images/about-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-#about h2 {
+#profile h2 {
   font-size: 80px;
-  color: var(--font-color);
   text-align: center;
 }
 
-#project {
+#profile .profile-box {
+  position: relative;
+  z-index: 0;
+  margin: 0 auto;
+  padding-left: 300px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+#profile .profile-box .img-box {
+  position: absolute;
+  top: -50px;
+  left: 100px;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+}
+
+#profile .profile-box .img-box img {
+  margin-bottom: -45px;
+}
+
+#profile .profile-box .img-box img:nth-child(2) {
+  transform: translateX(-90px);
+}
+
+#profile .profile-box .name {
+  font-size: 28px;
+  font-weight: 300;
+  color: #000;
+}
+
+#profile .profile-box .name span {
+  font-size: 16px;
+  color: var(--font-color);
+  font-weight: 200;
+}
+
+#profile .profile-box .contents {
+  margin-top: 20px;
+}
+
+#profile .profile-box .content {
+  padding: 20px 10px;
+  border-bottom: 0.1px solid #ccc;
+}
+
+#profile .profile-box .content h3 {
+  font-size: 20px;
+  font-weight: 300;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+#profile .profile-box .content p {
+  font-weight: 300;
+}
+
+#profile .profile-box .icon-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#profile .profile-box .icon-box .stack-icon {
+  background: var(--font-color);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 3px 7px;
+  border-radius: 3px;
+}
+
+#profile .profile-box .icon-box .stack-icon p {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+#profile .profile-box .advantage p {
+  color: #000;
+}
+
+#profile .profile-box .advantage p span {
+  font-size: 14px;
+  color: var(--font-color);
+}
+
+/* #################### */
+/* ##### PROJECTS ##### */
+/* #################### */
+
+#projects {
   background-image: url(./images/project-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
 }
 
-#project h2 {
+#projects h2 {
   font-size: 80px;
-  color: var(--font-color);
   text-align: center;
 }
+
+/* ################### */
+/* ##### CONTACT ##### */
+/* ################### */
 
 #contact {
   background-image: url(./images/contact-bg.png);
@@ -194,7 +300,7 @@ section {
 
 #contact h2 {
   font-size: 80px;
-  color: var(--font-color);
+
   text-align: center;
 }
 
@@ -215,15 +321,12 @@ section {
 }
 
 #contact .contents .content .content-title {
-  color: var(--font-color);
 }
 
 #contact .contents .content p {
-  color: var(--font-color);
 }
 
 #contact .copy {
-  color: var(--font-color);
   font-size: 14px;
   text-align: center;
 }
