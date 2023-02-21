@@ -89,7 +89,7 @@ function App() {
     return () => {
       currentWrapDivRef.removeEventListener("wheel", wheelHandler);
     };
-  }, []);
+  }, [pageHeight]);
 
   const onClickNav = (pageNum) => {
     setScrollIndex(pageNum);

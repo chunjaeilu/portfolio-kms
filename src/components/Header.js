@@ -2,7 +2,7 @@
 
 export default function Header({ onClickNav, scrollIndex }) {
   return (
-    <header style={scrollIndex !== 0 ? { height: "70px" } : null}>
+    <header style={scrollIndex !== 0 ? { maxHeight: "70px" } : null}>
       <h1
         className="logo"
         onClick={() => {
