@@ -5,9 +5,14 @@ const Dot = ({ scrollIndex, num, onClickNav }) => {
       style={{
         width: 10,
         height: 10,
-        border: "2px solid #fff",
+        border: scrollIndex === 0 ? "2px solid #fff" : "2px solid #605e5e",
         borderRadius: "50%",
-        backgroundColor: scrollIndex === num ? "#fff" : "transparent",
+        backgroundColor:
+          scrollIndex === num
+            ? scrollIndex === 0
+              ? "#fff"
+              : "#605e5e"
+            : "transparent",
         transitionDuration: "0.5s",
         transiton: "background-color 0.5s",
       }}

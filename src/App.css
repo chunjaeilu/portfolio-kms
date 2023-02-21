@@ -4,7 +4,7 @@
 
 body {
   font-family: "Noto Sans KR", sans-serif;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 * {
@@ -23,7 +23,8 @@ a {
 }
 
 .wrap {
-  width: 100vw;
+  width: 100%;
+  max-width: 1920px;
   height: 100vh;
   overflow-y: auto;
   background: #ccc;
@@ -37,7 +38,7 @@ a {
 .divider {
   width: 100%;
   height: 5px;
-  background-color: gray;
+  background-color: #fff;
 }
 
 .dots {
@@ -85,6 +86,7 @@ header nav ul li {
 section {
   width: 100%;
   height: 100vh;
+  padding: 100px 20px;
 }
 
 #title {
@@ -92,6 +94,7 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
   display: flex;
 }
 
@@ -112,7 +115,7 @@ section {
 
 #title .area {
   width: 50%;
-  margin-top: 50vh;
+  margin-top: 40vh;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -142,10 +145,66 @@ section {
   color: var(--main-color);
 }
 
+#about {
+  background-image: url(./images/about-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#about h2 {
+  font-size: 80px;
+  color: #605e5e;
+  text-align: center;
+}
+
 #project {
-  background: #acb;
+  background-image: url(./images/project-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+#project h2 {
+  font-size: 80px;
+  color: #605e5e;
+  text-align: center;
 }
 
 #contact {
-  background: #c7a;
+  background-image: url(./images/contact-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+#contact h2 {
+  font-size: 80px;
+  color: #605e5e;
+  text-align: center;
+}
+
+#contact .contents {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+#contact .contents .content {
+  width: 200px;
+  border-top: 5px solid #605e5e;
+}
+
+#contact .contents .content.f-logo {
+  width: 200px;
+  border-top: none;
+}
+
+#contact .copy {
+  color: #605e5e;
+  font-size: 14px;
 }

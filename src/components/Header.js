@@ -18,7 +18,9 @@ export default function Header({ onClickNav, scrollIndex }) {
             onClick={() => {
               onClickNav(0);
             }}
-            style={scrollIndex === 0 ? { color: "#e3fb6d" } : null}
+            style={
+              scrollIndex === 0 ? { color: "#e3fb6d" } : { color: "#605E5E" }
+            }
           >
             HOME
           </li>
@@ -26,7 +28,13 @@ export default function Header({ onClickNav, scrollIndex }) {
             onClick={() => {
               onClickNav(1);
             }}
-            style={scrollIndex === 1 ? { color: "#e3fb6d" } : null}
+            style={
+              scrollIndex === 0
+                ? { color: "#fff" }
+                : scrollIndex === 1
+                ? { color: "#e3fb6d" }
+                : { color: "#605E5E" }
+            }
           >
             ABOUT
           </li>
@@ -34,7 +42,13 @@ export default function Header({ onClickNav, scrollIndex }) {
             onClick={() => {
               onClickNav(2);
             }}
-            style={scrollIndex === 2 ? { color: "#e3fb6d" } : null}
+            style={
+              scrollIndex === 0
+                ? { color: "#fff" }
+                : scrollIndex === 2
+                ? { color: "#e3fb6d" }
+                : { color: "#605E5E" }
+            }
           >
             PROJECTS
           </li>
@@ -42,7 +56,13 @@ export default function Header({ onClickNav, scrollIndex }) {
             onClick={() => {
               onClickNav(3);
             }}
-            style={scrollIndex === 3 ? { color: "#e3fb6d" } : null}
+            style={
+              scrollIndex === 0
+                ? { color: "#fff" }
+                : scrollIndex === 3
+                ? { color: "#e3fb6d" }
+                : { color: "#605E5E" }
+            }
           >
             CONTACT
           </li>
