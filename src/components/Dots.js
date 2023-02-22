@@ -24,7 +24,6 @@ const Dot = ({ scrollIndex, num, toSlide }) => {
   );
 };
 export default function Dots({ scrollIndex, toSlide }) {
-  console.log(scrollIndex);
   return (
     <div className="dots">
       <Dot scrollIndex={scrollIndex} num={0} toSlide={toSlide} />
