@@ -1,10 +1,10 @@
 // Title.js
 
-import HoneyComb from "./HoneyComb";
+import HoneyComb from "../components/HoneyComb";
 
 export default function Title() {
   return (
-    <section id="title">
+    <section>
       <div className="txt-box">
         <h2>
           EXPANDING <br /> MY WORLD

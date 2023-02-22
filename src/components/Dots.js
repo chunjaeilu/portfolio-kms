@@ -1,7 +1,8 @@
 // Dots.js
-const Dot = ({ scrollIndex, num, onClickNav }) => {
+const Dot = ({ scrollIndex, num, toSlide }) => {
   return (
     <div
+      className="dot"
       style={{
         width: 10,
         height: 10,
@@ -17,18 +18,19 @@ const Dot = ({ scrollIndex, num, onClickNav }) => {
         transiton: "background-color 0.5s",
       }}
       onClick={() => {
-        onClickNav(num);
+        toSlide(num);
       }}
     ></div>
   );
 };
-export default function Dots({ scrollIndex, onClickNav }) {
+export default function Dots({ scrollIndex, toSlide }) {
+  console.log(scrollIndex);
   return (
     <div className="dots">
-      <Dot scrollIndex={scrollIndex} num={0} onClickNav={onClickNav} />
-      <Dot scrollIndex={scrollIndex} num={1} onClickNav={onClickNav} />
-      <Dot scrollIndex={scrollIndex} num={2} onClickNav={onClickNav} />
-      <Dot scrollIndex={scrollIndex} num={3} onClickNav={onClickNav} />
+      <Dot scrollIndex={scrollIndex} num={0} toSlide={toSlide} />
+      <Dot scrollIndex={scrollIndex} num={1} toSlide={toSlide} />
+      <Dot scrollIndex={scrollIndex} num={2} toSlide={toSlide} />
+      <Dot scrollIndex={scrollIndex} num={3} toSlide={toSlide} />
     </div>
   );
 }

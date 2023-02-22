@@ -1,12 +1,12 @@
 // Header.js
 
-export default function Header({ onClickNav, scrollIndex }) {
+export default function Header({ scrollIndex, toSlide }) {
   return (
     <header style={scrollIndex !== 0 ? { maxHeight: "70px" } : null}>
       <h1
         className="logo"
         onClick={() => {
-          onClickNav(0);
+          toSlide(0);
         }}
         style={scrollIndex !== 0 ? { transform: "scale(50%)" } : null}
       >
@@ -16,7 +16,7 @@ export default function Header({ onClickNav, scrollIndex }) {
         <ul>
           <li
             onClick={() => {
-              onClickNav(0);
+              toSlide(0);
             }}
             style={
               scrollIndex === 0 ? { color: "#e3fb6d" } : { color: "#605E5E" }
@@ -26,7 +26,7 @@ export default function Header({ onClickNav, scrollIndex }) {
           </li>
           <li
             onClick={() => {
-              onClickNav(1);
+              toSlide(1);
             }}
             style={
               scrollIndex === 0
@@ -40,7 +40,7 @@ export default function Header({ onClickNav, scrollIndex }) {
           </li>
           <li
             onClick={() => {
-              onClickNav(2);
+              toSlide(2);
             }}
             style={
               scrollIndex === 0
@@ -54,7 +54,7 @@ export default function Header({ onClickNav, scrollIndex }) {
           </li>
           <li
             onClick={() => {
-              onClickNav(3);
+              toSlide(3);
             }}
             style={
               scrollIndex === 0

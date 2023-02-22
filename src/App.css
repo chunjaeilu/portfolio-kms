@@ -30,21 +30,31 @@ a {
 
 .wrap {
   width: 100%;
-  max-width: 1920px;
   height: 100vh;
   overflow-y: auto;
   background: #ccc;
   margin: 0 auto;
 }
 
-.wrap::-webkit-scrollbar {
-  display: none;
+.swiper {
+  width: 100vw;
+  height: 100vh;
 }
 
-.divider {
-  width: 100%;
-  height: 5px;
-  background-color: #fff;
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper .swiper-pagination {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.swiper .swiper-pagination .swiper-pagination-bullet-active {
+  background: #fff !important;
 }
 
 .dots {
@@ -58,6 +68,11 @@ a {
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 100;
+}
+
+.dots .dot {
+  cursor: pointer;
 }
 
 header {
@@ -75,6 +90,7 @@ header {
 header .logo {
   padding: 10px;
   transition: 0.5s;
+  cursor: pointer;
 }
 
 header .logo img {
@@ -88,7 +104,7 @@ header nav ul {
 
 header nav ul li {
   color: #fff;
-  cursor: default;
+  cursor: pointer;
   font-size: 18px;
 }
 
@@ -97,6 +113,7 @@ section {
   height: 100vh;
   padding: 100px;
 }
+
 /* ################# */
 /* ##### TITLE ##### */
 /* ################# */
@@ -120,7 +137,7 @@ section {
 
 #title .txt-box h2 {
   font-size: 100px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 #title .txt-box p {
@@ -134,13 +151,13 @@ section {
   align-items: flex-end;
   position: absolute;
   bottom: 50px;
-  right: 50px;
+  right: 100px;
 }
 
 #title .area .row {
   display: flex;
   gap: 5px;
-  margin-bottom: -30px;
+  margin-bottom: -32.5px;
 }
 
 #title .area .row1,
@@ -176,6 +193,7 @@ section {
 #profile h2 {
   font-size: 80px;
   text-align: center;
+  font-weight: 500;
 }
 
 #profile .profile-box {
@@ -281,6 +299,34 @@ section {
 #projects h2 {
   font-size: 80px;
   text-align: center;
+  font-weight: 500;
+}
+
+#projects .project-box {
+  width: 100%;
+  height: calc(100% - 120px);
+  display: flex;
+  justify-content: flex-start;
+}
+
+#projects .project-box .project {
+  display: flex;
+}
+
+#projects .project-box .project .btn-arcodion {
+  width: 100px;
+  height: 100%;
+  background: #ccc;
+}
+
+#projects .project-box .project .content {
+  width: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+#projects .project-box .project .content.active {
+  width: calc(100vw - 500px);
 }
 
 /* ################### */
@@ -292,22 +338,31 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+#contact section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 #contact h2 {
   font-size: 80px;
-
   text-align: center;
+  font-weight: 500;
 }
 
 #contact .contents {
   display: flex;
   gap: 40px;
   justify-content: center;
+}
+
+#contact .contents .content-col {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
 }
 
 #contact .contents .content {
@@ -318,6 +373,27 @@ section {
 #contact .contents .content.f-logo {
   width: 200px;
   border-top: none;
+}
+
+#contact .contents .content.f-logo img {
+  cursor: pointer;
+}
+
+#contact .contents .content a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  border: 2px solid var(--font-color);
+  border-radius: 3px;
+  padding: 7px;
+  font-size: 15px;
+  color: var(--font-color);
+  margin-top: 20px;
+}
+
+#contact .contents .content a:hover {
+  background: var(--font-color);
+  color: var(--main-color);
 }
 
 #contact .contents .content .content-title {

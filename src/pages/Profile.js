@@ -12,7 +12,7 @@ import { ReactComponent as Github } from "../images/stack/github.svg";
 
 export default function Profile() {
   return (
-    <section id="profile">
+    <section>
       <h2>PROFILE</h2>
       <div className="profile-box">
         <div className="img-box">
@@ -43,7 +43,7 @@ export default function Profile() {
           <div className="content">
             <h3>About</h3>
             <p>
-              1988.08.27 | chunjaeilu@naver.com | 010.2014.4350 | 경기도 안양시
+              chunjaeilu@naver.com | 010.2014.4350 | 1988.08.27 | 경기도 안양시
             </p>
           </div>
           <div className="content">
