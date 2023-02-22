@@ -32,7 +32,6 @@ a {
   width: 100%;
   height: 100vh;
   overflow-y: auto;
-  background: #ccc;
   margin: 0 auto;
 }
 
@@ -290,7 +289,7 @@ section {
 /* #################### */
 
 #projects {
-  background-image: url(./images/project-bg.png);
+  /* background-image: url(./images/project-bg.png); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -307,6 +306,7 @@ section {
   height: calc(100% - 120px);
   display: flex;
   justify-content: flex-start;
+  outline: 2px solid #7e947b;
 }
 
 #projects .project-box .project {
@@ -314,19 +314,38 @@ section {
 }
 
 #projects .project-box .project .btn-arcodion {
-  width: 100px;
+  width: 50px;
   height: 100%;
-  background: #ccc;
+  background: #7e947b;
+  color: #fff;
+  border-right: 0.1px solid #fff;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#projects .project-box .project:last-child .btn-arcodion {
+  border-right: none;
+}
+
+#projects .project-box .project .btn-arcodion > p {
+  writing-mode: vertical-rl;
 }
 
 #projects .project-box .project .content {
   width: 0;
   overflow: hidden;
   transition: 0.5s;
+  background: #fff;
 }
 
 #projects .project-box .project .content.active {
-  width: calc(100vw - 500px);
+  width: calc(100vw - 350px);
+}
+
+#projects .project-box .project .content .project-title {
+  text-align: center;
 }
 
 /* ################### */
