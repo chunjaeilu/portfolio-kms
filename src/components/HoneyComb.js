@@ -10,7 +10,7 @@ export default function HoneyComb({ display, text }) {
       >
         <path
           d="M3 31.6023L50 4.35015L97 31.6023V86.1288L50 113.381L3 86.1288V31.6023Z"
-          stroke={display ? "#E3FB6D" : "none"}
+          stroke={display ? "#FAE25F" : "none"}
           stroke-width="5"
         />
       </svg>

@@ -19,7 +19,7 @@ export default function Header({ scrollIndex, toSlide }) {
               toSlide(0);
             }}
             style={
-              scrollIndex === 0 ? { color: "#e3fb6d" } : { color: "#605E5E" }
+              scrollIndex === 0 ? { color: "#FAE25F" } : { color: "#605E5E" }
             }
           >
             HOME
@@ -32,7 +32,7 @@ export default function Header({ scrollIndex, toSlide }) {
               scrollIndex === 0
                 ? { color: "#fff" }
                 : scrollIndex === 1
-                ? { color: "#e3fb6d" }
+                ? { color: "#FAE25F" }
                 : { color: "#605E5E" }
             }
           >
@@ -46,7 +46,7 @@ export default function Header({ scrollIndex, toSlide }) {
               scrollIndex === 0
                 ? { color: "#fff" }
                 : scrollIndex === 2
-                ? { color: "#e3fb6d" }
+                ? { color: "#FAE25F" }
                 : { color: "#605E5E" }
             }
           >
@@ -60,7 +60,7 @@ export default function Header({ scrollIndex, toSlide }) {
               scrollIndex === 0
                 ? { color: "#fff" }
                 : scrollIndex === 3
-                ? { color: "#e3fb6d" }
+                ? { color: "#FAE25F" }
                 : { color: "#605E5E" }
             }
           >

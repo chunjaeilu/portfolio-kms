@@ -2,9 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 
 :root {
-  --main-color: #e3fb6d;
+  --main-color: #fae25f;
   --font-color: #605e5e;
-  --sub-color: #7e947b;
+  --sub-color: #e3bd4b;
 }
 
 body {
@@ -319,16 +319,17 @@ section {
 #projects .project-box .project .btn-arcodion {
   width: 50px;
   height: 100%;
-  background: #7e947b;
-  /* background: var(--font-color); */
-  /* background: #fde560; */
-  /* background: #e3dc56; */
+  background: var(--main-color);
   color: #fff;
   border-right: 0.1px solid #fff;
   display: flex;
   justify-content: center;
   padding: 5px;
   cursor: pointer;
+}
+
+#projects .project-box .project .btn-arcodion.active {
+  background: var(--sub-color);
 }
 
 #projects .project-box .project:last-child .btn-arcodion {
@@ -380,64 +381,13 @@ section {
   gap: 20px;
 }
 
-#projects .project-box .project .content.active .project-contents .img-box {
-  height: calc(100%);
-  position: relative;
-}
-
-#projects .project-box .project .content.active .project-contents .img-box img {
-  max-width: 600px;
-  max-height: 500px;
-}
-
-#projects
-  .project-box
-  .project
-  .content.active
-  .project-contents
-  .img-box
-  .page-btn-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2px;
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#projects
-  .project-box
-  .project
-  .content.active
-  .project-contents
-  .img-box
-  .page-btn-box
-  button {
-  padding: 10px;
-  border: 0.1px solid var(--font-color);
-  background: #fff;
-}
-
-#projects
-  .project-box
-  .project
-  .content.active
-  .project-contents
-  .img-box
-  .page-btn-box
-  button.active {
-  background: var(--sub-color);
-  color: #fff;
-}
-
 #projects
   .project-box
   .project
   .content.active
   .project-contents
   .project-txt-box {
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -491,7 +441,63 @@ section {
   .project-txt-box
   .btn-box
   a:hover {
-  background: var(--sub-color);
+  background: var(--font-color);
+  color: #fff;
+}
+
+#projects .project-box .project .content.active .project-contents .img-box {
+  width: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#projects .project-box .project .content.active .project-contents .img-box img {
+  max-width: 550px;
+  max-height: 500px;
+}
+
+#projects
+  .project-box
+  .project
+  .content.active
+  .project-contents
+  .img-box
+  .page-btn-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#projects
+  .project-box
+  .project
+  .content.active
+  .project-contents
+  .img-box
+  .page-btn-box
+  button {
+  padding: 10px;
+  border: 0.1px solid var(--font-color);
+  background: #fff;
+  border-radius: 3px;
+}
+
+#projects
+  .project-box
+  .project
+  .content.active
+  .project-contents
+  .img-box
+  .page-btn-box
+  button.active {
+  background: var(--font-color);
   color: #fff;
 }
 
