@@ -14,6 +14,12 @@
 <p align='center'><img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"><img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"><img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"><img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"> <br> <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=Figma&logoColor=white"><img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"><img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white"><img src="https://img.shields.io/badge/vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"></p>
 
 ## Screenshot
+![image](https://user-images.githubusercontent.com/112890661/220833834-6aad2aa6-8a0c-4fd5-8178-f91a35b1c0d3.png)
+![image](https://user-images.githubusercontent.com/112890661/220833892-c7562c6c-1e41-4514-9acd-10a00cc20589.png)
+![image](https://user-images.githubusercontent.com/112890661/220833938-74aa8971-875c-4127-8846-444984fef002.png)
+![image](https://user-images.githubusercontent.com/112890661/220833965-403c6b9e-2798-45be-ac6b-6004929cb387.png)
+
+
 
 ## Install
   ```cmd
