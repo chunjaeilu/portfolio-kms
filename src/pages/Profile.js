@@ -1,4 +1,5 @@
 // About.js
+// svg
 import { ReactComponent as HTML } from "../images/stack/html5.svg";
 import { ReactComponent as CSS } from "../images/stack/css3.svg";
 import { ReactComponent as JavaScript } from "../images/stack/javascript.svg";
