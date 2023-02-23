@@ -91,7 +91,7 @@ export default function Projects() {
               <p>{item.title}</p>
             </div>
             <div className={`content ${activeIndex === i ? "active" : ""}`}>
-              <Project item={item} />
+              <Project item={item} activeIndex={activeIndex} />
             </div>
           </div>
         ))}

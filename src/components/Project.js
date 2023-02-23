@@ -1,8 +1,12 @@
 // Project.js
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function Project({ item }) {
+export default function Project({ item, activeIndex }) {
   const [imgIndex, setImgIndex] = useState(0);
+
+  useEffect(() => {
+    setImgIndex(0);
+  }, [activeIndex]);
 
   return (
     <>
