@@ -52,8 +52,6 @@ export default function Projects({ activeIndex, onChangeProject }) {
       stack: "HTML | CSS | JavaScript | jQuery | Figma",
       url: "https://chunjaeilu.github.io/kolon_global/",
       github: "https://github.com/chunjaeilu/kolon_global.git",
-      frameWidth: 1920,
-      frameHeight: 1024,
       btnTxt: "사이트 접속",
     },
     {
