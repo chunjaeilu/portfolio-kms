@@ -1,4 +1,5 @@
-// About.js
+// Profile.js
+
 // svg
 import { ReactComponent as HTML } from "../images/stack/html5.svg";
 import { ReactComponent as CSS } from "../images/stack/css3.svg";
@@ -14,7 +15,7 @@ import { ReactComponent as Github } from "../images/stack/github.svg";
 export default function Profile() {
   return (
     <section>
-      <h2>PROFILE</h2>
+      <h2 className="slide-up">PROFILE</h2>
       <div className="profile-box">
         <div className="img-box">
           <img
@@ -27,13 +28,8 @@ export default function Profile() {
             src="./images/profile-02.png"
             alt="profile-02"
           />
-          {/* <img
-            className="profile-img"
-            src="./images/profile-03.png"
-            alt="profile-03"
-          /> */}
         </div>
-        <h3 className="name">
+        <h3 className="name slide-right ">
           김민수 (KIM MINSU)
           <span>
             {" : : "}
@@ -41,13 +37,13 @@ export default function Profile() {
           </span>
         </h3>
         <div className="contents">
-          <div className="content">
+          <div className="content slide-right dlay-1">
             <h3>About</h3>
             <p>
               chunjaeilu@naver.com | 010.2014.4350 | 1988.08.27 | 경기도 안양시
             </p>
           </div>
-          <div className="content">
+          <div className="content slide-right dlay-2">
             <h3>Stack</h3>
             <div className="icon-box">
               <div className="stack-icon">
@@ -92,14 +88,14 @@ export default function Profile() {
               </div>
             </div>
           </div>
-          <div className="content">
+          <div className="content slide-right dlay-3">
             <h3>Career & License</h3>
             <p>
               UI/UX Web Design(Web Publisher & Frontend Developer) 900시간 수료
               | 웹디자인 기능사(필기합격)
             </p>
           </div>
-          <div className="content advantage">
+          <div className="content advantage  slide-right dlay-4">
             <h3>Advantage</h3>
             <p>
               GROWTH : :<span> 항상 성장하는</span> | RESPONSIBILITY : :

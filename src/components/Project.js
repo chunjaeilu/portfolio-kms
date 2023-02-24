@@ -36,10 +36,18 @@ export default function Project({ item, activeIndex }) {
             <a
               href={item.url}
               className="site"
-              target="_blank"
-              rel="noreferrer"
+              onClick={(e) => {
+                e.preventDefault();
+                window.open(
+                  item.url,
+                  "_blank",
+                  `width=${item.frameWidth}, height=${item.frameHeight}, left=${
+                    window.screen.width / 2 - item.frameWidth / 2
+                  }, top=${window.screen.height / 2 - item.frameHeight / 2}`
+                );
+              }}
             >
-              사이트 접속
+              {item.btnTxt}
             </a>
             <a
               href={item.github}
@@ -52,7 +60,9 @@ export default function Project({ item, activeIndex }) {
           </div>
         </div>
         <div className="img-box">
-          <img src={item.img ? item.img[imgIndex] : null} alt="project-img" />
+          <div className="img">
+            <img src={item.img ? item.img[imgIndex] : null} alt="project-img" />
+          </div>
           <div className="page-btn-box">
             {item.img?.map((e, i) => (
               <button

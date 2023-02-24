@@ -1,3 +1,5 @@
+// Contact.js
+
 const Content = ({ title, desc, url, button }) => {
   return (
     <div className="content">
@@ -16,7 +18,7 @@ const Content = ({ title, desc, url, button }) => {
 export default function Contact({ toSlide }) {
   return (
     <section>
-      <h2>CONTACT</h2>
+      <h2 className="slide-up">CONTACT</h2>
       <div className="contents">
         <div className="f-logo content">
           <img

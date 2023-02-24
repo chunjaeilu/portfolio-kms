@@ -1,14 +1,9 @@
 // Projects.js
 
-import { useState } from "react";
-
 import "swiper/css";
-
 import Project from "../components/Project";
 
-export default function Projects() {
-  const [activeIndex, setActiveIndex] = useState(0);
-
+export default function Projects({ activeIndex, onChangeProject }) {
   const projectData = [
     {
       title: "DamDam",
@@ -33,7 +28,9 @@ export default function Projects() {
         "HTML | CSS | JavaScript | jQuery | Node.js | Express | EJS | JSON | Figma",
       url: "https://port-0-damdam3-fyyf25lbohiha7.gksl2.cloudtype.app/",
       github: "https://github.com/chunjaeilu/damdam3.git",
-      mainColor: "#1FAB89",
+      frameWidth: 375,
+      frameHeight: 667,
+      btnTxt: "앱 접속",
     },
     {
       title: "Kolon Global",
@@ -55,7 +52,9 @@ export default function Projects() {
       stack: "HTML | CSS | JavaScript | jQuery | Figma",
       url: "https://chunjaeilu.github.io/kolon_global/",
       github: "https://github.com/chunjaeilu/kolon_global.git",
-      mainColor: "#0078C3",
+      frameWidth: 1920,
+      frameHeight: 1024,
+      btnTxt: "사이트 접속",
     },
     {
       title: "Public Service",
@@ -73,19 +72,22 @@ export default function Projects() {
       stack: "HTML | CSS | JavaScript | React | Axios | Expo | Figma",
       url: "https://web-my-public-service-cf24lcehrrvk.gksl2.cloudtype.app/",
       github: "https://github.com/chunjaeilu/My_Public_Service.git",
-      mainColor: "#033075",
+      frameWidth: 375,
+      frameHeight: 667,
+      btnTxt: "앱 접속",
     },
   ];
+
   return (
     <section>
-      <h2>PROJECTS</h2>
+      <h2 className="slide-up">PROJECTS</h2>
       <div className="project-box">
         {projectData.map((item, i) => (
           <div key={i} className="project">
             <div
               className={`btn-arcodion ${activeIndex === i ? "active" : ""}`}
               onClick={() => {
-                setActiveIndex(i);
+                onChangeProject(i);
               }}
             >
               <p>{item.title}</p>

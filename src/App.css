@@ -132,6 +132,7 @@ section {
   flex-direction: column;
   justify-content: center;
   color: #fff;
+  z-index: 100;
 }
 
 #title .txt-box h2 {
@@ -140,8 +141,8 @@ section {
 }
 
 #title .txt-box p {
-  font-size: 20px;
-  font-weight: 100;
+  font-size: 22px;
+  font-weight: 300;
 }
 
 #title .area {
@@ -149,8 +150,9 @@ section {
   flex-direction: column;
   align-items: flex-end;
   position: absolute;
-  bottom: 100px;
+  bottom: 50px;
   right: 100px;
+  z-index: 0;
 }
 
 #title .area .row {
@@ -172,27 +174,9 @@ section {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotateY(180deg);
   color: var(--main-color);
   font-weight: 300;
-}
-
-/* aos animation */
-#title .area .row .stack-box svg {
-  opacity: 0;
-}
-
-#title .area .row .stack-box svg.aos-animate {
-  opacity: 1;
-  transform: rotateY(180deg);
-}
-
-#title .area .row .stack-box .stack-txt {
-  opacity: 0;
-}
-
-#title .area .row .stack-box .stack-txt.aos-animate {
-  opacity: 1;
 }
 
 /* ################### */
@@ -322,7 +306,7 @@ section {
   width: 100%;
   height: calc(100% - 120px);
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   outline: 2px solid #7e947b;
   outline: 2px solid var(--font-color);
 }
@@ -356,26 +340,8 @@ section {
 }
 
 #projects .project-box .project .content {
-  width: 0;
   overflow: hidden;
-  transition: 0.5s;
   background: #fff;
-}
-
-#projects .project-box .project .content .project-title,
-#projects .project-box .project .content .project-contents {
-  display: none;
-}
-
-#projects .project-box .project .content.active .project-title {
-  display: block;
-}
-#projects .project-box .project .content.active .project-contents {
-  display: flex;
-}
-
-#projects .project-box .project .content.active {
-  width: calc(100vw - 350px);
 }
 
 #projects .project-box .project .content.active .project-title {
@@ -390,7 +356,6 @@ section {
 
 #projects .project-box .project .content.active .project-contents {
   height: calc(100% - 35px);
-  padding-top: 20px;
   padding-left: 50px;
   display: flex;
   gap: 20px;
@@ -462,15 +427,36 @@ section {
 
 #projects .project-box .project .content.active .project-contents .img-box {
   width: 50%;
+  height: 100%;
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-#projects .project-box .project .content.active .project-contents .img-box img {
-  max-width: 550px;
-  max-height: 500px;
+#projects
+  .project-box
+  .project
+  .content.active
+  .project-contents
+  .img-box
+  .img {
+  width: 100%;
+  height: calc(100% - 57px);
+}
+
+#projects
+  .project-box
+  .project
+  .content.active
+  .project-contents
+  .img-box
+  .img
+  img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 #projects
@@ -481,13 +467,8 @@ section {
   .img-box
   .page-btn-box {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   gap: 2px;
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 #projects
@@ -593,4 +574,182 @@ section {
 #contact .copy {
   font-size: 14px;
   text-align: center;
+}
+
+/* ##################### */
+/* ##### animation ##### */
+/* ##################### */
+
+/* 페이지 공통 */
+.slide-up,
+.slide-right {
+  opacity: 0;
+}
+
+.swiper-slide-active .slide-up {
+  animation: slide-up 1s 0.5s forwards;
+}
+
+.swiper-slide-active .slide-right {
+  animation: slide-right 1s forwards;
+}
+
+.swiper-slide-active .slide-right.dlay-1 {
+  animation: slide-right 1s 0.3s forwards;
+}
+
+.swiper-slide-active .slide-right.dlay-2 {
+  animation: slide-right 1s 0.6s forwards;
+}
+
+.swiper-slide-active .slide-right.dlay-3 {
+  animation: slide-right 1s 0.9s forwards;
+}
+
+.swiper-slide-active .slide-right.dlay-4 {
+  animation: slide-right 1s 1.2s forwards;
+}
+
+/* ## title page ## */
+/* 플립 */
+#title .area .row .stack-box {
+  opacity: 0;
+  transition: 1.5s;
+}
+
+#title .area .row .stack-box.flip {
+  opacity: 1;
+  transform: rotateY(180deg);
+}
+
+/* 호버 */
+#title .area .row .stack-box:hover svg {
+  fill: var(--main-color);
+  animation: smallTobig 1s ease-in infinite;
+}
+
+#title .area .row .stack-box:hover .stack-txt {
+  color: var(--font-color);
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+#title .area::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  animation: ripple 2s 1s infinite;
+  z-index: -1;
+}
+
+#title .area .row .stack-box:hover::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  animation: ripple 2s 0.3s infinite;
+}
+
+/* ## projects page ## */
+/* 액티브 클래스 >> 슬라이드 */
+#projects .project-box .project .content {
+  width: 0;
+  transition: 0.8s ease;
+}
+
+#projects .project-box .project .content.active {
+  width: calc(100vw - 350px);
+}
+
+#projects .project-box .project .content .project-title {
+  opacity: 0;
+}
+
+#projects .project-box .project .content.active .project-title {
+  animation: slide-up-sm 1s 0.5s ease-in-out forwards;
+}
+
+#projects .project-box .project .content .project-contents {
+  opacity: 0;
+}
+
+#projects .project-box .project .content.active .project-contents {
+  opacity: 1;
+  transition: 1s 0.5s;
+}
+
+/* ## keyframes ## */
+@keyframes smallTobig {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes ripple {
+  from {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  to {
+    width: 3000px;
+    height: 3000px;
+    opacity: 0;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(300px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up-sm {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-left-sm {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
