@@ -1,6 +1,6 @@
 # PORTFOLIO SITE
 
-## Distribution
+## Deployment
 > Vercel
 >
 > https://portfolio-kms.vercel.app/
