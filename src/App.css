@@ -489,7 +489,8 @@ section .page-title {
   .img-box
   .page-btn-box
   button {
-  padding: 10px;
+  font-family: "poppins", sans-serif;
+  padding: 5px;
   border: 0.1px solid var(--point-color);
   background: #fff;
   border-radius: 3px;
