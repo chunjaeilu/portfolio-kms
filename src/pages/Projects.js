@@ -28,8 +28,8 @@ export default function Projects({ activeIndex, onChangeProject }) {
         "HTML | CSS | JavaScript | jQuery | Node.js | Express | EJS | JSON | Figma",
       url: "https://port-0-damdam3-fyyf25lbohiha7.gksl2.cloudtype.app/",
       github: "https://github.com/chunjaeilu/damdam3.git",
-      frameWidth: 375,
-      frameHeight: 667,
+      frameWidth: 400,
+      frameHeight: 720,
       btnTxt: "앱 접속",
     },
     {
@@ -70,15 +70,15 @@ export default function Projects({ activeIndex, onChangeProject }) {
       stack: "HTML | CSS | JavaScript | React | Axios | Expo | Figma",
       url: "https://web-my-public-service-cf24lcehrrvk.gksl2.cloudtype.app/",
       github: "https://github.com/chunjaeilu/My_Public_Service.git",
-      frameWidth: 375,
-      frameHeight: 667,
+      frameWidth: 400,
+      frameHeight: 720,
       btnTxt: "앱 접속",
     },
   ];
 
   return (
     <section>
-      <h2 className="slide-up">PROJECTS</h2>
+      <h2 className="page-title slide-up">PROJECTS</h2>
       <div className="project-box">
         {projectData.map((item, i) => (
           <div key={i} className="project">

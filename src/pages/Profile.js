@@ -15,7 +15,7 @@ import { ReactComponent as Github } from "../images/stack/github.svg";
 export default function Profile() {
   return (
     <section>
-      <h2 className="slide-up">PROFILE</h2>
+      <h2 className="page-title slide-up">PROFILE</h2>
       <div className="profile-box">
         <div className="img-box">
           <img

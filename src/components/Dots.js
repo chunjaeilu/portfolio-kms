@@ -6,13 +6,13 @@ const Dot = ({ scrollIndex, num, toSlide }) => {
       style={{
         width: 10,
         height: 10,
-        border: scrollIndex === 0 ? "2px solid #fff" : "2px solid #605e5e",
+        border: scrollIndex === 0 ? "2px solid #fff" : "2px solid #34495e",
         borderRadius: "50%",
         backgroundColor:
           scrollIndex === num
             ? scrollIndex === 0
               ? "#fff"
-              : "#605e5e"
+              : "#34495e"
             : "transparent",
         transitionDuration: "0.5s",
         transiton: "background-color 0.5s",

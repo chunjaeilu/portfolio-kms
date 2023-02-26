@@ -10,7 +10,7 @@ export default function Header({ scrollIndex, toSlide }) {
         }}
         style={scrollIndex !== 0 ? { transform: "scale(50%)" } : null}
       >
-        <img src="./images/logo.png" alt="" />
+        <img src="./images/logo.svg" alt="" />
       </h1>
       <nav>
         <ul>
@@ -19,7 +19,9 @@ export default function Header({ scrollIndex, toSlide }) {
               toSlide(0);
             }}
             style={
-              scrollIndex === 0 ? { color: "#FAE25F" } : { color: "#605E5E" }
+              scrollIndex === 0
+                ? { color: "#FAE25F" }
+                : { color: "#605e5e", fontWeight: "300" }
             }
           >
             HOME
@@ -30,10 +32,10 @@ export default function Header({ scrollIndex, toSlide }) {
             }}
             style={
               scrollIndex === 0
-                ? { color: "#fff" }
+                ? { color: "#fff", fontWeight: "200" }
                 : scrollIndex === 1
                 ? { color: "#FAE25F" }
-                : { color: "#605E5E" }
+                : { color: "#605e5e", fontWeight: "300" }
             }
           >
             PROFILE
@@ -44,10 +46,10 @@ export default function Header({ scrollIndex, toSlide }) {
             }}
             style={
               scrollIndex === 0
-                ? { color: "#fff" }
+                ? { color: "#fff", fontWeight: "200" }
                 : scrollIndex === 2
                 ? { color: "#FAE25F" }
-                : { color: "#605E5E" }
+                : { color: "#605e5e", fontWeight: "300" }
             }
           >
             PROJECTS
@@ -58,10 +60,10 @@ export default function Header({ scrollIndex, toSlide }) {
             }}
             style={
               scrollIndex === 0
-                ? { color: "#fff" }
+                ? { color: "#fff", fontWeight: "200" }
                 : scrollIndex === 3
                 ? { color: "#FAE25F" }
-                : { color: "#605E5E" }
+                : { color: "#605e5e", fontWeight: "300" }
             }
           >
             CONTACT

@@ -4,6 +4,7 @@
 :root {
   --main-color: #fae25f;
   --font-color: #605e5e;
+  --point-color: #34495e;
   --sub-color: #e3bd4b;
 }
 
@@ -113,12 +114,19 @@ section {
   padding: 100px;
 }
 
+section .page-title {
+  color: var(--point-color);
+  font-size: 80px;
+  text-align: center;
+  font-weight: 500;
+}
+
 /* ################# */
 /* ##### TITLE ##### */
 /* ################# */
 
 #title {
-  background-image: url(./images/title-bg.webp);
+  background-image: url(./images/main-title-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -190,12 +198,6 @@ section {
   background-position: top;
 }
 
-#profile h2 {
-  font-size: 80px;
-  text-align: center;
-  font-weight: 500;
-}
-
 #profile .profile-box {
   position: relative;
   z-index: 0;
@@ -226,7 +228,7 @@ section {
 #profile .profile-box .name {
   font-size: 28px;
   font-weight: 300;
-  color: #000;
+  color: var(--point-color);
 }
 
 #profile .profile-box .name span {
@@ -246,8 +248,8 @@ section {
 
 #profile .profile-box .content h3 {
   font-size: 20px;
-  font-weight: 300;
-  color: #000;
+  font-weight: 400;
+  color: var(--point-color);
   margin-bottom: 10px;
 }
 
@@ -262,7 +264,7 @@ section {
 }
 
 #profile .profile-box .icon-box .stack-icon {
-  background: var(--font-color);
+  background: var(--point-color);
   display: flex;
   gap: 10px;
   align-items: center;
@@ -277,7 +279,7 @@ section {
 }
 
 #profile .profile-box .advantage p {
-  color: #000;
+  color: var(--point-color);
 }
 
 #profile .profile-box .advantage p span {
@@ -296,19 +298,12 @@ section {
   background-position: top;
 }
 
-#projects h2 {
-  font-size: 80px;
-  text-align: center;
-  font-weight: 500;
-}
-
 #projects .project-box {
   width: 100%;
   height: calc(100% - 120px);
   display: flex;
   justify-content: flex-end;
-  outline: 2px solid #7e947b;
-  outline: 2px solid var(--font-color);
+  outline: 2px solid var(--point-color);
 }
 
 #projects .project-box .project {
@@ -347,11 +342,14 @@ section {
 #projects .project-box .project .content.active .project-title {
   text-align: center;
   font-size: 24px;
+  font-weight: 600;
+  color: var(--point-color);
 }
 
 #projects .project-box .project .content.active .project-title span {
   font-size: 18px;
   font-weight: 400;
+  color: var(--font-color);
 }
 
 #projects .project-box .project .content.active .project-contents {
@@ -383,7 +381,18 @@ section {
   h4 {
   font-size: 18px;
   font-weight: 400;
-  color: #000;
+  color: var(--point-color);
+}
+
+#projects
+  .project-box
+  .project
+  .content.active
+  .project-contents
+  .project-txt-box
+  p {
+  font-weight: 300;
+  word-break: keep-all;
 }
 
 #projects
@@ -408,9 +417,10 @@ section {
   a {
   width: 120px;
   text-align: center;
-  border: 1px solid var(--font-color);
+  border: 1px solid var(--point-color);
   border-radius: 3px;
   padding: 3px;
+  color: var(--point-color);
 }
 
 #projects
@@ -421,7 +431,7 @@ section {
   .project-txt-box
   .btn-box
   a:hover {
-  background: var(--font-color);
+  background: var(--point-color);
   color: #fff;
 }
 
@@ -480,9 +490,10 @@ section {
   .page-btn-box
   button {
   padding: 10px;
-  border: 0.1px solid var(--font-color);
+  border: 0.1px solid var(--point-color);
   background: #fff;
   border-radius: 3px;
+  color: var(--point-color);
 }
 
 #projects
@@ -493,7 +504,7 @@ section {
   .img-box
   .page-btn-box
   button.active {
-  background: var(--font-color);
+  background: var(--point-color);
   color: #fff;
 }
 
@@ -515,12 +526,6 @@ section {
   padding-bottom: 10px;
 }
 
-#contact h2 {
-  font-size: 80px;
-  text-align: center;
-  font-weight: 500;
-}
-
 #contact .contents {
   margin-top: 150px;
   display: flex;
@@ -536,7 +541,7 @@ section {
 
 #contact .contents .content {
   width: 250px;
-  border-top: 5px solid #605e5e;
+  border-top: 5px solid var(--point-color);
 }
 
 #contact .contents .content.f-logo {
@@ -552,20 +557,22 @@ section {
   display: block;
   width: 100%;
   text-align: center;
-  border: 2px solid var(--font-color);
+  border: 2px solid var(--point-color);
   border-radius: 3px;
   padding: 7px;
   font-size: 15px;
-  color: var(--font-color);
+  color: var(--point-color);
   margin-top: 20px;
 }
 
 #contact .contents .content a:hover {
-  background: var(--font-color);
+  background: var(--point-color);
   color: var(--main-color);
 }
 
 #contact .contents .content .content-title {
+  color: var(--point-color);
+  font-weight: 700;
 }
 
 #contact .contents .content p {

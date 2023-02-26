@@ -18,11 +18,11 @@ const Content = ({ title, desc, url, button }) => {
 export default function Contact({ toSlide }) {
   return (
     <section>
-      <h2 className="slide-up">CONTACT</h2>
+      <h2 className="page-title slide-up">CONTACT</h2>
       <div className="contents">
         <div className="f-logo content">
           <img
-            src="./images/logo-mono.png"
+            src="./images/logo_mono.svg"
             alt="logo"
             onClick={() => {
               toSlide(0);
