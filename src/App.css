@@ -234,7 +234,7 @@ section .page-title {
 #profile .profile-box .name span {
   font-size: 16px;
   color: var(--font-color);
-  font-weight: 200;
+  font-weight: 300;
 }
 
 #profile .profile-box .contents {
@@ -311,7 +311,7 @@ section .page-title {
 }
 
 #projects .project-box .project .btn-arcodion {
-  width: 50px;
+  width: 60px;
   height: 100%;
   background: var(--main-color);
   color: #fff;
@@ -676,7 +676,7 @@ section .page-title {
 }
 
 #projects .project-box .project .content.active {
-  width: calc(100vw - 350px);
+  width: calc(100vw - 380px);
 }
 
 #projects .project-box .project .content .project-title {
