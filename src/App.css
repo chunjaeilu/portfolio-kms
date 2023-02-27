@@ -130,7 +130,6 @@ section .page-title {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
   position: relative;
 }
 
@@ -759,5 +758,143 @@ section .page-title {
   }
   to {
     transform: translateY(0);
+  }
+}
+
+/* ################################################## */
+/* ################################################## */
+/* ################################################## */
+/* ################################################## */
+/* ##################### Mobile ##################### */
+/* ################################################## */
+/* ################################################## */
+/* ################################################## */
+/* ################################################## */
+
+@media (max-width: 767px) {
+  header {
+    max-height: 100px;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  header h1 {
+    display: flex;
+    transform-origin: left;
+  }
+
+  header nav .btn-nav-mob {
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+  }
+
+  header nav ul {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.97);
+    gap: 0;
+  }
+
+  header nav ul li {
+    line-height: 36px;
+    font-size: 16px;
+  }
+
+  section {
+    padding: 80px 20px 20px;
+  }
+
+  section .page-title {
+    font-size: 30px;
+  }
+
+  /* ################# */
+  /* ##### TITLE ##### */
+  /* ################# */
+
+  #title {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #title .txt-box {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    z-index: 100;
+  }
+
+  #title .txt-box h2 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  #title .txt-box p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  #title .area {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #title .area .row {
+    display: flex;
+    gap: 3px;
+    margin-bottom: -21.5px;
+  }
+
+  #title .area .row1,
+  #title .area .row3 {
+    transform: translateX(-28.5px);
+  }
+
+  #title .area .row .stack-box .stack-txt {
+    top: 48%;
+    font-size: 10px;
+    font-weight: 200;
+  }
+
+  /* ################### */
+  /* ##### PROFILE ##### */
+  /* ################### */
+
+  #profile {
+    background-position: 35%;
+  }
+
+  #profile .profile-box {
+    position: relative;
+    padding-left: 0;
+    padding-top: 20px;
+  }
+
+  #profile .profile-box .name {
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--point-color);
+  }
+
+  #profile .profile-box .name span {
+    font-size: 14px;
+    word-break: keep-all;
   }
 }

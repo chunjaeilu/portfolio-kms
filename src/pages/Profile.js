@@ -12,23 +12,25 @@ import { ReactComponent as SQLite } from "../images/stack/sqlite.svg";
 import { ReactComponent as Figma } from "../images/stack/figma.svg";
 import { ReactComponent as Github } from "../images/stack/github.svg";
 
-export default function Profile() {
+export default function Profile({ diviceWidth }) {
   return (
     <section>
       <h2 className="page-title slide-up">PROFILE</h2>
       <div className="profile-box">
-        <div className="img-box">
-          <img
-            className="profile-img"
-            src="./images/profile-01.png"
-            alt="profile-01"
-          />
-          <img
-            className="profile-img"
-            src="./images/profile-02.png"
-            alt="profile-02"
-          />
-        </div>
+        {diviceWidth >= 768 ? (
+          <div className="img-box">
+            <img
+              className="profile-img"
+              src="./images/profile-01.png"
+              alt="profile-01"
+            />
+            <img
+              className="profile-img"
+              src="./images/profile-02.png"
+              alt="profile-02"
+            />
+          </div>
+        ) : null}
         <h3 className="name slide-right ">
           김민수 (KIM MINSU)
           <span>
@@ -47,43 +49,43 @@ export default function Profile() {
             <h3>Stack</h3>
             <div className="icon-box">
               <div className="stack-icon">
-                <HTML width={28} />
+                <HTML width={diviceWidth >= 768 ? 28 : 18} />
                 <p>HTML</p>
               </div>
               <div className="stack-icon">
-                <CSS width={28} />
+                <CSS width={diviceWidth >= 768 ? 28 : 18} />
                 <p>CSS</p>
               </div>
               <div className="stack-icon">
-                <JavaScript width={28} />
+                <JavaScript width={diviceWidth >= 768 ? 28 : 18} />
                 <p>JavaScript</p>
               </div>
               <div className="stack-icon">
-                <JQuery width={28} />
+                <JQuery width={diviceWidth >= 768 ? 28 : 18} />
                 <p>jQuery</p>
               </div>
               <div className="stack-icon">
-                <Nodejs width={28} />
+                <Nodejs width={diviceWidth >= 768 ? 28 : 18} />
                 <p>Node.js</p>
               </div>
               <div className="stack-icon">
-                <Express width={28} />
+                <Express width={diviceWidth >= 768 ? 28 : 18} />
                 <p>Express</p>
               </div>
               <div className="stack-icon">
-                <React width={28} />
+                <React width={diviceWidth >= 768 ? 28 : 18} />
                 <p>React</p>
               </div>
               <div className="stack-icon">
-                <SQLite width={28} />
+                <SQLite width={diviceWidth >= 768 ? 28 : 18} />
                 <p>SQLite</p>
               </div>
               <div className="stack-icon">
-                <Figma width={28} />
+                <Figma width={diviceWidth >= 768 ? 28 : 18} />
                 <p>Figma</p>
               </div>
               <div className="stack-icon">
-                <Github width={28} />
+                <Github width={diviceWidth >= 768 ? 28 : 18} />
                 <p>Github</p>
               </div>
             </div>

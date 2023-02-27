@@ -25,6 +25,9 @@ function App() {
   const [activeIndex, setActiveIndex] = useState(null);
   const swiperRef = useRef();
 
+  // 해상도
+  const [diviceWidth, setDiviceWidth] = useState(window.innerWidth);
+
   const toSlide = (num) => {
     swiperRef.current.swiper.slideTo(num);
   };
@@ -42,9 +45,21 @@ function App() {
   const onChangeProject = (i) => {
     setActiveIndex(i);
   };
+
+  // 기기 해상도 width값 받아오기
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setDiviceWidth(window.innerWidth);
+    });
+  }, []);
+
   return (
     <div className="wrap">
-      <Header toSlide={toSlide} scrollIndex={scrollIndex} />
+      <Header
+        toSlide={toSlide}
+        scrollIndex={scrollIndex}
+        diviceWidth={diviceWidth}
+      />
       <Dots scrollIndex={scrollIndex} toSlide={toSlide} />
       <Swiper
         ref={swiperRef}
@@ -61,20 +76,21 @@ function App() {
         }}
       >
         <SwiperSlide id="title">
-          <Title />
+          <Title diviceWidth={diviceWidth} />
         </SwiperSlide>
         <SwiperSlide id="profile">
-          <Profile />
+          <Profile diviceWidth={diviceWidth} />
         </SwiperSlide>
         <SwiperSlide id="projects">
           <Projects
             activeIndex={activeIndex}
             onChangeProject={onChangeProject}
+            diviceWidth={diviceWidth}
           />
         </SwiperSlide>
 
         <SwiperSlide id="contact">
-          <Contact toSlide={toSlide} />
+          <Contact toSlide={toSlide} diviceWidth={diviceWidth} />
         </SwiperSlide>
       </Swiper>
     </div>
