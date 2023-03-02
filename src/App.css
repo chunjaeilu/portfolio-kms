@@ -159,7 +159,7 @@ section .page-title {
   position: absolute;
   bottom: 50px;
   right: 100px;
-  z-index: 0;
+  z-index: -100;
 }
 
 #title .area .row {
@@ -565,7 +565,8 @@ section .page-title {
   margin-top: 20px;
 }
 
-#contact .contents .content a:hover {
+#contact .contents .content a:hover,
+#contact .contents .content a:active {
   background: var(--point-color);
   color: var(--main-color);
 }
@@ -630,12 +631,14 @@ section .page-title {
 }
 
 /* 호버 */
-#title .area .row .stack-box:hover svg {
+#title .area .row .stack-box:hover svg,
+#title .area .row .stack-box:active svg {
   fill: var(--main-color);
   animation: smallTobig 1s ease-in infinite;
 }
 
-#title .area .row .stack-box:hover .stack-txt {
+#title .area .row .stack-box:hover .stack-txt,
+#title .area .row .stack-box:active .stack-txt {
   color: var(--font-color);
   font-weight: 500;
   transition: 0.2s;
@@ -826,16 +829,17 @@ section .page-title {
   }
 
   #title .txt-box {
-    height: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: #fff;
     z-index: 100;
+    padding-bottom: 100px;
   }
 
   #title .txt-box h2 {
-    font-size: 30px;
+    font-size: 40px;
     text-align: center;
   }
 
@@ -845,15 +849,11 @@ section .page-title {
   }
 
   #title .area {
-    position: relative;
     left: 0;
-    top: 0;
     width: 100%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: -100;
   }
 
   #title .area .row {
@@ -882,19 +882,112 @@ section .page-title {
   }
 
   #profile .profile-box {
-    position: relative;
     padding-left: 0;
     padding-top: 20px;
+    height: calc(100vh - 150px);
+    padding-bottom: 50px;
   }
 
   #profile .profile-box .name {
     font-size: 20px;
-    font-weight: 300;
-    color: var(--point-color);
   }
 
   #profile .profile-box .name span {
     font-size: 14px;
+    word-break: keep-all;
+  }
+
+  #profile .profile-box .contents {
+    margin-top: 0;
+    height: calc(100% - 65px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  #profile .profile-box .content {
+    padding: 10px 0;
+  }
+
+  #profile .profile-box .content h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  #profile .profile-box .content p {
+    font-size: 14px;
+    word-break: keep-all;
+  }
+
+  #profile .profile-box .icon-box {
+    gap: 5px;
+  }
+
+  #profile .profile-box .icon-box .stack-icon {
+    gap: 5px;
+    padding: 3px 5px;
+  }
+
+  #profile .profile-box .icon-box .stack-icon p {
+    font-size: 12px;
+  }
+
+  #profile .profile-box .advantage p span {
+    font-size: 12px;
+  }
+
+  /* #################### */
+  /* ##### PROJECTS ##### */
+  /* #################### */
+
+  /* ################### */
+  /* ##### CONTACT ##### */
+  /* ################### */
+
+  #contact .contents {
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+  }
+
+  #contact .contents .content-col {
+    gap: 20px;
+  }
+
+  #contact .contents .content {
+    height: 20vh;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  #contact .contents .content-col .content {
+    height: 10vh;
+  }
+
+  #contact .contents .content.f-logo {
+    display: none;
+  }
+
+  #contact .contents .content a {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  #contact .contents .content .content-title {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  #contact .contents .content p {
+    font-size: 14px;
+  }
+
+  #contact .copy {
+    font-size: 12px;
+    text-align: center;
     word-break: keep-all;
   }
 }
